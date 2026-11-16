@@ -22,6 +22,7 @@ window.WORKS = [
   {
     id: "ON9TcGaKfb4",
     published: true,
+    instShort: "y2OnsbNiDdQ",
     title: "staple stable",
     original: "戦場ヶ原ひたぎ（CV：斎藤千和）",
     singer: "りーす",
@@ -46,6 +47,7 @@ window.WORKS = [
   {
     id: "huvPlUgMHN8",
     published: true,
+    instShort: "8M6eUrp_BWU",
     title: "Breeze",
     original: "林原めぐみ",
     singer: "りーす",
@@ -58,6 +60,7 @@ window.WORKS = [
   {
     id: "yrlzHoHpknU",
     published: true,
+    instShort: "FHArIu2W-00",
     title: "振り向けば…",
     original: "Janne Da Arc",
     singer: "りーす",
@@ -70,7 +73,7 @@ window.WORKS = [
   {
     id: "XHVN6_5Hfto",
     published: true,
-    instShort: "EBM7o9wMerQ",
+    instShort: "a95VHgUWW6k",
     title: "ウィーアー！",
     original: "きただにひろし",
     singer: "りーす",
