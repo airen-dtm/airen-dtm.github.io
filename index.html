@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>藍蓮 | 制作実績</title>
+<meta name="description" content="藍蓮(あいれん)が制作した、歌ってみた用instの制作実績です。">
+<meta property="og:title" content="藍蓮 | 制作実績">
+<meta property="og:description" content="歌ってみた用inst制作。実際にご依頼頂いた方の完成動画を掲載しています。">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="icon.jpg">
+<link rel="apple-touch-icon" href="icon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #12202a;
+    --ink-soft: #4b5f6d;
+    --ink-faint: #8596a2;
+    --indigo: #0e446a;
+    --indigo-deep: #04141c;
+    --indigo-pale: #e4eef4;
+    --paper: #f5f6f4;
+    --card: #ffffff;
+    --line: #dfe5e8;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  a { color: inherit; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    background: #08212e;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-band {
+    max-width: 1120px; margin: 0 auto;
+    background: linear-gradient(180deg, #0c2a3a 0%, #12394e 100%);
+    border-left: 1px solid #285470; border-right: 1px solid #285470;
+    padding: 56px 24px 60px;
+    text-align: center;
+  }
+  @media (max-width: 1160px) { .hero-band { border-left: 0; border-right: 0; } }
+  .wrap { max-width: 1080px; margin: 0 auto; position: relative; z-index: 1; }
+  .avatar {
+    width: 104px; height: 104px; border-radius: 50%; display: block; margin: 0 auto 18px;
+    border: 2px solid #c9a45c; padding: 3px; background: #08212e; object-fit: cover;
+  }
+  .eyebrow { font-size: 13px; letter-spacing: .14em; color: #c9a45c; margin: 0 0 10px; }
+  .name {
+    font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
+    font-weight: 700; font-size: 46px; line-height: 1.2; margin: 0; letter-spacing: .02em;
+  }
+  .name small { font-family: "Zen Kaku Gothic New", sans-serif; font-size: 15px; font-weight: 500; letter-spacing: .1em; color: #9fbfcf; margin-left: 10px; }
+  .handle { margin: 6px 0 0; font-size: 14px; color: #9fbfcf; letter-spacing: .04em; }
+  .accent-line { width: 120px; height: 4px; background: #c9a45c; border-radius: 2px; margin: 22px auto 24px; }
+  .lead p { margin: 0; font-size: 15px; color: #dde8ee; word-break: auto-phrase; text-wrap: balance; }
+  .stats {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 40px; margin: 30px 0 0; padding: 0; list-style: none;
+  }
+  .stats li { font-size: 12px; color: #6f93a6; }
+  .stats b {
+    display: block; font-family: "Zen Maru Gothic", sans-serif; font-size: 28px; font-weight: 700;
+    color: #ffffff; line-height: 1.3;
+  }
+
+  /* ---------- filter ---------- */
+  .works { padding: 36px 20px 24px; }
+  .section-title {
+    font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; font-size: 20px; margin: 0 0 14px;
+    display: flex; align-items: baseline; gap: 10px;
+  }
+  .section-title span { font-size: 12px; font-weight: 500; color: var(--ink-faint); letter-spacing: .15em; }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+  .chip {
+    font: inherit; font-size: 13px;
+    border: 1px solid var(--line); background: var(--card); color: var(--ink-soft);
+    border-radius: 999px; padding: 6px 14px; cursor: pointer;
+  }
+  .chip[aria-pressed="true"] { background: var(--indigo); border-color: var(--indigo); color: #fff; }
+
+  /* ---------- cards ---------- */
+  .grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  @media (min-width: 720px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .name { font-size: 60px; } }
+  @media (min-width: 1040px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    overflow: hidden; display: flex; flex-direction: column;
+  }
+  .video {
+    position: relative; aspect-ratio: 16 / 9; background: #04141c; cursor: pointer;
+    border: 0; padding: 0; width: 100%; display: block;
+  }
+  .video img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .video .play {
+    position: absolute; inset: 0; margin: auto; width: 64px; height: 44px; border-radius: 12px;
+    background: rgba(4,20,28,.78); display: flex; align-items: center; justify-content: center;
+    transition: background .15s;
+  }
+  .video:hover .play, .video:focus-visible .play { background: #e5322d; }
+  .video .play::before {
+    content: ""; border-left: 16px solid #fff; border-top: 10px solid transparent; border-bottom: 10px solid transparent; margin-left: 4px;
+  }
+  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+  .body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    font-size: 11px; line-height: 1; padding: 5px 9px; border-radius: 6px;
+    background: var(--indigo-pale); color: var(--indigo);
+  }
+  .tag.repeat { background: #f6eedc; color: #7a5a1c; }
+  .tag.draft { background: #e9e9e9; color: #555; }
+  .tag.short { background: #fbe4e3; color: #9c2621; }
+  .title { font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; font-size: 18px; line-height: 1.45; margin: 0; word-break: auto-phrase; }
+  .title .orig { font-family: "Zen Kaku Gothic New", sans-serif; font-weight: 400; font-size: 13px; color: var(--ink-soft); margin-left: 6px; }
+  .meta { margin: 0; font-size: 13px; color: var(--ink-soft); }
+  .point {
+    margin: 2px 0 0; font-size: 14px; color: var(--ink); background: var(--paper);
+    border-left: 3px solid var(--indigo); padding: 10px 12px; line-height: 1.75;
+  }
+  .point::before { content: "こだわりポイント"; display: block; font-size: 11px; color: var(--indigo); letter-spacing: .08em; margin-bottom: 2px; }
+  .jump {
+    align-self: flex-start; font: inherit; font-size: 12px; color: var(--indigo);
+    background: none; border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; cursor: pointer;
+  }
+  .jump.inst { color: #9c2621; border-color: #f0c9c7; }
+  .empty { color: var(--ink-faint); font-size: 14px; }
+
+  /* ---------- contact ---------- */
+  .contact { padding: 28px 20px 56px; }
+  .contact-box {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 26px 22px; text-align: center;
+  }
+  .contact-box p { margin: 0 0 18px; color: var(--ink-soft); font-size: 14px; }
+  .btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .btn {
+    text-decoration: none; font-size: 14px; padding: 11px 22px; border-radius: 999px;
+    border: 1px solid var(--indigo); color: var(--indigo); background: #fff;
+  }
+  .btn.primary { background: var(--indigo); color: #fff; }
+  footer { text-align: center; font-size: 12px; color: var(--ink-faint); padding: 0 20px 32px; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-band">
+    <img class="avatar" src="icon.jpg" alt="藍蓮のアイコン">
+    <p class="eyebrow" id="site-tagline"></p>
+    <h1 class="name" id="site-name"></h1>
+    <p class="handle" id="site-handle"></p>
+    <div class="accent-line"></div>
+    <div class="lead" id="site-lead"></div>
+    <ul class="stats" id="stats"></ul>
+  </div>
+</header>
+
+<main>
+  <section class="works">
+    <div class="wrap">
+      <h2 class="section-title">制作実績 <span>WORKS</span></h2>
+      <div class="filters" id="filters" role="group" aria-label="絞り込み"></div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="wrap">
+      <div class="contact-box">
+        <p>inst制作のご相談は、お気軽にどうぞ！</p>
+        <div class="btns" id="btns"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer"></footer>
+
+<script src="works.js"></script>
+<script>
+(function () {
+  var S = window.SITE || {};
+  var SHOW_ALL = !!window.__SHOW_ALL;
+  var works = (window.WORKS || []).filter(function (w) { return SHOW_ALL || w.published === true; }).sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+
+  /* hero */
+  var nameEl = document.getElementById("site-name");
+  nameEl.textContent = S.name || "";
+  if (S.kana) nameEl.appendChild(el("small", null, S.kana));
+  document.getElementById("site-tagline").textContent = S.tagline || "";
+  var hd = document.getElementById("site-handle");
+  if (S.x) { hd.textContent = "@" + S.x.replace(/\/$/, "").split("/").pop(); } else { hd.remove(); }
+  var lead = document.getElementById("site-lead");
+  [].concat(S.lead || []).forEach(function (line) { lead.appendChild(el("p", null, line)); });
+
+  /* repeat clients */
+  var count = {};
+  works.forEach(function (w) { if (w.client) count[w.client] = (count[w.client] || 0) + 1; });
+  var repeatClients = Object.keys(count).filter(function (k) { return count[k] >= 2; });
+  works.forEach(function (w) { w._repeat = !!w.client && count[w.client] >= 2; });
+
+  var stats = document.getElementById("stats");
+  if (!works.length) { stats.style.display = "none"; }
+  [["公開中の作品", works.length + "曲"], ["リピートのご依頼", repeatClients.length + "名"]].forEach(function (s) {
+    var li = el("li"); li.appendChild(el("b", null, s[1])); li.appendChild(document.createTextNode(s[0])); stats.appendChild(li);
+  });
+
+  /* filters */
+  var filters = [
+    { key: "all", label: "すべて", test: function () { return true; } },
+    { key: "inst", label: "Inst", test: function (w) { return w.role === "Inst"; } },
+    { key: "mix", label: "Inst+MIX", test: function (w) { return w.role === "Inst+MIX"; } },
+    { key: "arrange", label: "アレンジ", test: function (w) { return /アレンジ/.test(w.role); } },
+    { key: "repeat", label: "リピートのご依頼", test: function (w) { return w._repeat; } },
+  ].filter(function (f) { return f.key === "all" || works.some(f.test); });
+  var current = "all";
+  var fbox = document.getElementById("filters");
+  if (!works.length) { fbox.style.display = "none"; }
+  filters.forEach(function (f) {
+    var b = el("button", "chip", f.label);
+    b.type = "button";
+    b.setAttribute("aria-pressed", f.key === current ? "true" : "false");
+    b.addEventListener("click", function () {
+      current = f.key;
+      [].forEach.call(fbox.children, function (c) { c.setAttribute("aria-pressed", "false"); });
+      b.setAttribute("aria-pressed", "true");
+      render();
+    });
+    fbox.appendChild(b);
+  });
+
+  function fmtStart(sec) { var m = Math.floor(sec / 60), s = sec % 60; return m + ":" + (s < 10 ? "0" : "") + s; }
+
+  function play(box, w, start) {
+    var f = document.createElement("iframe");
+    f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(w.id) +
+      "?autoplay=1&rel=0&playsinline=1&start=" + (start || 0);
+    f.title = w.title + "（" + w.singer + "）";
+    f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+    f.allowFullscreen = true;
+    box.innerHTML = "";
+    box.appendChild(f);
+    box.style.cursor = "default";
+  }
+
+  function card(w) {
+    var c = el("article", "card");
+
+    var v = el("button", "video");
+    v.type = "button";
+    v.setAttribute("aria-label", w.title + " を再生");
+    var img = document.createElement("img");
+    img.src = "https://i.ytimg.com/vi/" + encodeURIComponent(w.id) + "/hqdefault.jpg";
+    img.alt = ""; img.loading = "lazy";
+    img.onerror = function () { img.style.visibility = "hidden"; };
+    v.appendChild(img);
+    v.appendChild(el("span", "play"));
+    v.addEventListener("click", function () { if (!v.querySelector("iframe")) play(v, w, w.start); });
+    c.appendChild(v);
+
+    var b = el("div", "body");
+    var tags = el("div", "tags");
+    tags.appendChild(el("span", "tag", w.role));
+    if (w.published !== true) tags.appendChild(el("span", "tag draft", "未公開（許諾待ち）"));
+    if (w._repeat) tags.appendChild(el("span", "tag repeat", "リピートのご依頼"));
+    b.appendChild(tags);
+
+    var t = el("h3", "title", w.title);
+    if (w.original) t.appendChild(el("span", "orig", "/ " + w.original));
+    b.appendChild(t);
+
+    b.appendChild(el("p", "meta", (w.singer ? "Vo. " + w.singer : "inst音源のみ") + "　" + w.date.replace(/-/g, ".")));
+
+    if (w.point) b.appendChild(el("p", "point", w.point));
+
+    if (w.instShort) {
+      var sb = el("button", "jump inst", "▶ inst音源だけを聴く（Shorts）");
+      sb.type = "button";
+      sb.addEventListener("click", function () {
+        if (location.protocol === "file:") { window.open("https://www.youtube.com/shorts/" + encodeURIComponent(w.instShort), "_blank", "noopener"); return; }
+        play(v, { id: w.instShort, title: w.title + "（inst）", singer: "inst" }, 0);
+      });
+      b.appendChild(sb);
+    }
+
+    if (w.start > 0) {
+      var j = el("button", "jump", "▶ 聴きどころ（" + fmtStart(w.start) + "）から再生");
+      j.type = "button";
+      j.addEventListener("click", function () { play(v, w, w.start); });
+      b.appendChild(j);
+    }
+
+    c.appendChild(b);
+    return c;
+  }
+
+  var grid = document.getElementById("grid");
+  function render() {
+    var f = filters.filter(function (x) { return x.key === current; })[0];
+    grid.innerHTML = "";
+    var list = works.filter(f.test);
+    if (!list.length) { grid.appendChild(el("p", "empty", works.length ? "該当する作品はまだありません。" : "制作実績は、ただいま掲載の準備中です。")); return; }
+    list.forEach(function (w) { grid.appendChild(card(w)); });
+  }
+  render();
+
+  /* contact */
+  var btns = document.getElementById("btns");
+  if (S.coconala) { var a = el("a", "btn primary", "ココナラで相談する"); a.href = S.coconala; a.target = "_blank"; a.rel = "noopener"; btns.appendChild(a); }
+  if (S.x) { var x = el("a", "btn", "X " + document.getElementById("site-handle").textContent); x.href = S.x; x.target = "_blank"; x.rel = "noopener"; btns.appendChild(x); }
+
+  document.getElementById("footer").textContent = "© " + new Date().getFullYear() + " " + (S.name || "");
+})();
+</script>
+</body>
+</html>
