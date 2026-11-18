@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://airen-dtm.github.io/sitemap.xml
